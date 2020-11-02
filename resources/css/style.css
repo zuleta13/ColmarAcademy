@@ -3,11 +3,73 @@ html {
   font-size: 16px;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+p, a {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 950px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+
+
 /* Header styles */
 header {
   width: 100%;
   height: 4rem;
   background-color: white;
+  border: 1px solid lightgrey;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +87,7 @@ header {
   height: 2.5rem;
   position: relative;
   top: 2px;
+  left: -2px;
 }
 
 .logo {
@@ -44,6 +107,14 @@ ul.icons, ul.mobile {
 }
 
 @media only screen and (max-width: 800px) {
+  .logo {
+    margin-right: 0;
+  }
+
+  nav ul {
+    margin-left: 0;
+  }
+
   nav a {
     display: flex;
     align-items: center;
@@ -84,5 +155,124 @@ ul.icons, ul.mobile {
     display:flex;
     justify-content: space-around;
   }
+}
 
+
+/* MAIN SECTION */
+/* Learn, Info and Thesis section shared styles */
+main, footer {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+}
+
+.two-col-container {
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.left-col, .right-col {
+  /* border: 1px solid black;  */
+}
+
+.left-col {
+  width: 60%;
+  overflow: hidden;
+}
+
+.right-col {
+  width: 40%;
+  overflow: hidden;
+}
+
+.left-col .media {
+  width: 90%;
+  margin: 2rem 1.5rem;
+}
+
+
+/* Desde aquí todo se aplica a la columna derecha de la primera sección */
+#learn .right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#info .right-col .media {
+  width: 90%;
+}
+
+#learn .right-col h1,
+#learn .right-col h4,
+#learn .right-col a {
+  max-width: 22rem;
+}
+
+#learn .right-col a {
+  border: 1px solid black;
+  text-align: center;
+}
+
+@media only screen and (max-width: 950px) {
+  #learn .right-col h1,
+  #learn .right-col h4,
+  #learn .right-col a {
+    max-width: 18.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #learn {
+    flex-direction: column;
+  }
+
+  #learn .left-col,
+  #learn .right-col {
+    width: 100%;
+  }
+
+  #learn .left-col {
+    height: 20rem;
+    text-align: center;
+  }
+
+  #learn .media {
+    margin: 1.5rem 0;
+  }
+
+  #learn .right-col {
+    margin: 1.5rem 0;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #learn .left-col {
+    height: auto;
+  }
+
+  #learn .media {
+    width: 100%;
+    margin: 0;
+  }
+
+  #learn .right-col h1,
+  #learn .right-col h4 {
+    width: 16.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #learn .right-col h4 {
+    display: none;
+  }
+
+  #learn .right-col h1 {
+    text-align: center;
+  }
+}
+
+/* mientras tanto, para que no den por culo saliéndose del viewport... */
+.course {
+  overflow: hidden;
 }
