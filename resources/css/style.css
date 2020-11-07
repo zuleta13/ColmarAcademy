@@ -192,8 +192,8 @@ main, footer {
   margin: 2rem 1.5rem;
 }
 
-
-/* Desde aquí todo se aplica a la columna derecha de la primera sección */
+/* Sección 1: */
+/* Columna derecha */
 #learn .right-col {
   display: flex;
   flex-direction: column;
@@ -215,36 +215,12 @@ main, footer {
   text-align: center;
 }
 
+/* sección 1 - media queries específicos */
 @media only screen and (max-width: 950px) {
   #learn .right-col h1,
   #learn .right-col h4,
   #learn .right-col a {
     max-width: 18.5rem;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  #learn {
-    flex-direction: column;
-  }
-
-  #learn .left-col,
-  #learn .right-col {
-    width: 100%;
-  }
-
-  #learn .left-col {
-    height: 20rem;
-    text-align: center;
-  }
-
-  #learn .media {
-    margin: 1.5rem 0;
-  }
-
-  #learn .right-col {
-    margin: 1.5rem 0;
-    align-items: center;
   }
 }
 
@@ -274,6 +250,10 @@ main, footer {
   }
 }
 
+/* Sección 2: */
+#info .mobile {
+  display: none;
+}
 
 /* Estilos comunes de las secciones 2 y 4 */
 .right-col{
@@ -302,6 +282,59 @@ main, footer {
   width: 90%;
   margin-bottom: 1.5rem;
   margin-left: 1.5rem;
+}
+
+/* Secciones 1, 2 y 4: media queries - cambios compartidos */
+@media only screen and (max-width: 860px) {
+  /* contenedor de dos columnas: cambio a flex column */
+  .two-col-container {
+    flex-direction: column;
+  }
+
+  /* las columnas pasan a ocupar el 100% del ancho */
+  .left-col,
+  .right-col {
+    width: 100%;
+    display: flex;
+  }
+
+  /* columna izquierda - cambio a flex column */
+  .left-col {
+    flex-direction: column;
+  }
+
+  /* columna derecha - cambio a flex row */
+  #learn .right-col, /*hace falta más especificidad para aplicar el cambio*/
+  .right-col {
+    flex-direction: row;
+  }
+
+  /* media ocupa el ancho justo para quedar dentro de los límites del logo y del nav */
+  .left-col .media {
+    width: 94.42%;
+    margin: 2rem auto;
+  }
+
+  /* sección 1 - columna derecha: quitar 'Lorem ipsum' */
+  #learn h4 {
+    display: none;
+  }
+
+  /* sección 2 - columna izquierda: */
+  /* info-items -  ocupan el 30% del ancho y son flex column */
+  #info .info-item {
+    width: 30%;
+    flex-direction: column;
+  }
+
+  /* info-items - quitar las imagenes pequeñas */
+  #info .desktop {
+    display: none;
+  }
+
+  #info .mobile {
+    display: inline-block;
+  }
 }
 
 /* mientras tanto, para que no den por culo saliéndose del viewport... */
