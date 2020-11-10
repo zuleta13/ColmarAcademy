@@ -159,7 +159,7 @@ ul.icons, ul.mobile {
 
 
 /* MAIN SECTION */
-/* Learn, Info and Thesis section shared styles */
+/* Estilos compartidos - Secciones 1, 2 y 4 */
 main, footer {
   width: 100%;
   position: relative;
@@ -192,70 +192,7 @@ main, footer {
   margin: 2rem 1.5rem;
 }
 
-/* Sección 1: */
-/* Columna derecha */
-#learn .right-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#info .right-col .media {
-  width: 90%;
-}
-
-#learn .right-col h1,
-#learn .right-col h4,
-#learn .right-col a {
-  max-width: 22rem;
-}
-
-#learn .right-col a {
-  border: 1px solid black;
-  text-align: center;
-}
-
-/* sección 1 - media queries específicos */
-@media only screen and (max-width: 950px) {
-  #learn .right-col h1,
-  #learn .right-col h4,
-  #learn .right-col a {
-    max-width: 18.5rem;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  #learn .left-col {
-    height: auto;
-  }
-
-  #learn .media {
-    width: 100%;
-    margin: 0;
-  }
-
-  #learn .right-col h1,
-  #learn .right-col h4 {
-    width: 16.5rem;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  #learn .right-col h4 {
-    display: none;
-  }
-
-  #learn .right-col h1 {
-    text-align: center;
-  }
-}
-
-/* Sección 2: */
-#info .mobile {
-  display: none;
-}
-
-/* Estilos comunes de las secciones 2 y 4 */
+/* Estilos compartidos - Secciones 2 y 4 */
 .right-col{
   margin-top: 1rem;
 }
@@ -284,26 +221,22 @@ main, footer {
   margin-left: 1.5rem;
 }
 
-/* Secciones 1, 2 y 4: media queries - cambios compartidos */
+/* Estilos compartidos - Media queries - Secciones 1, 2 y 4 */
 @media only screen and (max-width: 860px) {
-  /* contenedor de dos columnas: cambio a flex column */
   .two-col-container {
     flex-direction: column;
   }
 
-  /* las columnas pasan a ocupar el 100% del ancho */
   .left-col,
   .right-col {
     width: 100%;
     display: flex;
   }
 
-  /* columna izquierda - cambio a flex column */
   .left-col {
     flex-direction: column;
   }
 
-  /* columna derecha - cambio a flex row */
   #learn .right-col, /*hace falta más especificidad para aplicar el cambio*/
   .right-col {
     flex-direction: row;
@@ -316,26 +249,119 @@ main, footer {
   }
 
   /* sección 1 - columna derecha: quitar 'Lorem ipsum' */
+  /* Debería estar dentro de uno específico de la sección 1 */
   #learn h4 {
     display: none;
   }
+}
 
-  /* sección 2 - columna izquierda: */
-  /* info-items -  ocupan el 30% del ancho y son flex column */
+@media only screen and (max-width:520px) {
+   .left-col .media {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Sección 1 - Estilos específicos */
+#learn .right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#info .right-col .media {
+  width: 90%;
+}
+
+#learn .right-col h1,
+#learn .right-col h4,
+#learn .right-col a {
+  max-width: 22rem;
+}
+
+#learn .right-col a {
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* Media queries */
+@media only screen and (max-width: 950px) {
+  #learn .right-col h1,
+  #learn .right-col h4,
+  #learn .right-col a {
+    max-width: 18.5rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #learn .left-col {
+    height: auto;
+  }
+
+  #learn .right-col h1,
+  #learn .right-col h4 {
+    width: 16.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #learn .right-col h4 {
+    display: none;
+  }
+
+  #learn .right-col h1 {
+    text-align: center;
+  }
+}
+
+/* Sección 2 - Estilos específicos */
+#info .mobile {
+  display: none;
+}
+
+/* Media queries */
+@media only screen and (max-width: 860px) {
   #info .info-item {
     width: 30%;
     flex-direction: column;
   }
 
-  /* info-items - quitar las imagenes pequeñas */
   #info .desktop {
     display: none;
   }
 
   #info .mobile {
     display: inline-block;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  #info .description {
+    width: 100%;
+    margin-top: 0.5rem;
   }
 }
+
+@media only screen and (max-width: 520px) {
+  #info .right-col {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #info .info-item {
+    width: 95%;
+  }
+
+  #info .description {
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+
+
+
 
 /* mientras tanto, para que no den por culo saliéndose del viewport... */
 .course {
