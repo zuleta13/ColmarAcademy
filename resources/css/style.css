@@ -359,6 +359,104 @@ main, footer {
   }
 }
 
+/* Sección 3 - Estilos específicos */
+#courses h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.grid {
+  margin: 2rem 0;
+  border: 1px solid red;
+}
+
+.grid .row-top,
+.grid .row-bottom {
+  margin: 0 7rem;
+  /* border: 1px solid red; BORDE PARA QUITAR*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid .row-top {
+  margin-bottom: 1rem;
+}
+
+.row .course {
+  width: 32%;
+}
+
+.course img {
+  width: 100%;
+}
+
+.course .description {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+@media only screen and (max-width: 950px) {
+  .grid .row-top,
+  .grid .row-bottom {
+    margin: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .grid .row-top,
+  .grid .row-bottom {
+    margin: 0 0;
+  }
+
+  .row .course {
+    width: 30%;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 746px) {
+  .grid {
+    display: flex;
+  }
+
+  .grid .row-top,
+  .grid .row-bottom {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  .row .course {
+    width: 95%;
+    border: 1px solid green; /*BORDE PARA QUITAR*/
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+
+  .course {
+    min-height: 18rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .grid .row-top,
+  .grid .row-bottom {
+    width: 100%;
+  }
+
+  .course {
+    min-height: auto;
+    height: 3rem;
+  }
+
+  .course img,
+  .course .description p {
+    display: none;
+  }
+}
 
 
 
