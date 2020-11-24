@@ -342,6 +342,12 @@ main, footer {
   }
 }
 
+@media only screen and (max-width: 443px) {
+  #info .left-col {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 520px) {
   #info .right-col {
     flex-direction: column;
@@ -470,9 +476,38 @@ main, footer {
   }
 }
 
+/* Sección 4 - Estilos específicos */
+#thesis h2 {
+  text-align: center;
+}
 
+#thesis .mobile {
+  display: none;
+}
 
-/* mientras tanto, para que no den por culo saliéndose del viewport... */
-.course {
-  overflow: hidden;
+@media only screen and (max-width: 860px) {
+  #thesis .info-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 633px) {
+  #thesis .info-item {
+    flex-direction: column;
+  }
+
+  #thesis .desktop {
+    display: none;
+  }
+
+  #thesis .mobile {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 488px) {
+  #thesis .right-col {
+    display: none;
+  }
 }
