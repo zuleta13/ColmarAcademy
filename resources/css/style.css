@@ -80,7 +80,6 @@ header {
 .logo, nav ul{
   display: flex;
   align-items: center;
-  margin: 0 1.25rem;
 }
 
 .logo img {
@@ -91,16 +90,26 @@ header {
 }
 
 .logo {
+  margin: 0 1.25rem;
   font-size: 1.75rem;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
 }
 
-nav li {
-  margin-left: 1.3rem;
+.nav-button {
+  position: relative;
+  top: -1px;
+  padding: 1.32rem 1.25rem;
+}
+
+.nav-button:hover {
+  color: white;
+  background-color: darkgreen;
 }
 
 nav a {
   font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 ul.icons, ul.mobile {
@@ -116,7 +125,8 @@ ul.icons, ul.mobile {
 }
 
 #colmar,
-#academy {
+#academy,
+nav a {
   opacity: 0.75;
 }
 
