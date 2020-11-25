@@ -258,7 +258,6 @@ main, footer {
 @media only screen and (max-width:520px) {
    .left-col .media {
     width: 100%;
-    margin: 0;
   }
 }
 
@@ -296,6 +295,10 @@ main, footer {
 @media only screen and (max-width: 520px) {
   #learn .left-col {
     height: auto;
+  }
+
+  #learn .left-col .media {
+    margin: 0;
   }
 
   #learn .right-col h1,
