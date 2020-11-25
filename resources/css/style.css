@@ -488,11 +488,6 @@ main, footer {
 @media only screen and (max-width: 860px) {
   #thesis .info-item {
     width: 50%;
-  }
-}
-
-@media only screen and (max-width: 633px) {
-  #thesis .info-item {
     flex-direction: column;
   }
 
@@ -505,6 +500,21 @@ main, footer {
     width: 100%;
   }
 }
+
+/* @media only screen and (max-width: 633px) {
+  #thesis .info-item {
+    flex-direction: column;
+  }
+
+  #thesis .desktop {
+    display: none;
+  }
+
+  #thesis .mobile {
+    display: inline-block;
+    width: 100%;
+  }
+} */
 
 @media only screen and (max-width: 488px) {
   #thesis .right-col {
